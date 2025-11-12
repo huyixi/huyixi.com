@@ -115,6 +115,6 @@ declare global {
   type MDXProvidedComponents = typeof components;
 }
 
-export function useMDXComponents(): MDXProvidedComponents {
+export function getMDXComponents(): MDXProvidedComponents {
   return components;
 }
