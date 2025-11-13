@@ -16,5 +16,5 @@ export default async function Page() {
     header: headerLocale,
   });
 
-  redirect(locale === "cn" ? "/cn" : "/en");
+  redirect(locale === "cn" ? "/cn" : "/");
 }
