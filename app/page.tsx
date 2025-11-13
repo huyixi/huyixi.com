@@ -1,5 +1,6 @@
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
+import Content from "./content.en.mdx";
 import { LOCALE_COOKIE, resolveLocale } from "@/lib/i18n";
 
 export const metadata = {
@@ -16,5 +17,9 @@ export default async function Page() {
     header: headerLocale,
   });
 
-  redirect(locale === "cn" ? "/cn" : "/");
+  if (locale === "cn") {
+    redirect("/cn");
+  }
+
+  return <Content />;
 }
