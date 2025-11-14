@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Jinkai';
+  font-display: swap;
+  src:
+    url('/fonts/jinkai.woff2') format('woff2'),
+    url('/fonts/jinkai.ttf') format('truetype');
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -38,7 +46,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --font-stix-two-text: "STIX Two Text", "STIX Two Text Fallback";
-  --font-zh: "PingFang SC", "PingFang TC", "PingFang", "Microsoft YaHei", "Hiragino Sans GB", "Heiti SC", sans-serif;
+  --font-zh: "TsangerJinKai02 W04", 'Jinkai', "PingFang SC", "PingFang TC", "PingFang", "Microsoft YaHei", "Hiragino Sans GB", "Heiti SC", sans-serif;
   --bg: var(--background);
   --text-copy: var(--foreground);
 }
@@ -138,5 +146,9 @@
 :lang(zh),
 :lang(zh-CN),
 :lang(zh-Hans) {
+  font-family: var(--font-zh);
+}
+
+.font-cn {
   font-family: var(--font-zh);
 }

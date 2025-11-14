@@ -1,6 +1,7 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import "../styles/fonts.css";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
