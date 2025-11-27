@@ -133,7 +133,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-stix-two-text);
+    /* 默认英文/拉丁字体栈，中文通过 :lang 规则覆盖 */
+    font-family: var(--font-stix-two-text), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
     background-color: var(--bg);
     max-width: 650px;
     color: var(--text-copy);
